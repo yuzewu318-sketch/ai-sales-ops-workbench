@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "currency": "CNY",
+  "as_of": "2030-03-15",
+  "input_sha256": "2b5bdb76aea72489e293560d5236a1d51f9f3203d577ca8c89c988c1a6df9cda",
+  "human_review_required": true,
+  "summary": {
+    "record_count": 8,
+    "reportable_count": 6,
+    "active_count": 3,
+    "active_amount_cny": "316000.00",
+    "won_count": 1,
+    "won_amount_cny": "32000.00",
+    "held_count": 2,
+    "closed_non_won_count": 2,
+    "active_amount_is_forecast": false
+  },
+  "conflicts": [
+    {
+      "project_id": "SYN-O03",
+      "field": "amount_cny",
+      "record_value": 73000,
+      "claims": [
+        {
+          "project_id": "SYN-O03",
+          "field": "amount_cny",
+          "value": 73000,
+          "source_id": "SYN-S03"
+        },
+        {
+          "project_id": "SYN-O03",
+          "field": "amount_cny",
+          "value": 74000,
+          "source_id": "SYN-S09"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "SYN-O01",
+      "partner_id": "SYN-P01",
+      "customer": "演示客户·A01",
+      "sector": "设计服务",
+      "need": "跨团队研发数据共享",
+      "owner": "演示业务角色A",
+      "stage": "discovery",
+      "amount_cny": 168000,
+      "budget_status": "unknown",
+      "decision_status": "unknown",
+      "expected_close": "2030-03-25",
+      "updated_on": "2030-03-01",
+      "confirmed": true,
+      "contract_confirmed": false,
+      "source_ids": [
+        "SYN-S01"
+      ],
+      "reportable": true,
+      "alerts": [
+        {
+          "code": "BUDGET",
+          "message": "预算未确认"
+        },
+        {
+          "code": "DECISION",
+          "message": "决策角色未确认"
+        },
+        {
+          "code": "STALE",
+          "message": "超过演示规则的10天未更新提醒线"
+        }
+      ],
+      "stage_label": "需求发现"
+    },
+    {
+      "id": "SYN-O02",
+      "partner_id": "SYN-P01",
+      "customer": "演示客户·A02",
+      "sector": "制造服务",
+      "need": "远程协作访问的安全验证",
+      "owner": "演示业务角色A",
+      "stage": "validation",
+      "amount_cny": 94000,
+      "budget_status": "confirmed",
+      "decision_status": "pending",
+      "expected_close": "2030-04-20",
+      "updated_on": "2030-03-14",
+      "confirmed": true,
+      "contract_confirmed": false,
+      "source_ids": [
+        "SYN-S02"
+      ],
+      "reportable": true,
+      "alerts": [
+        {
+          "code": "DECISION",
+          "message": "决策角色未确认"
+        }
+      ],
+      "stage_label": "方案验证"
+    },
+    {
+      "id": "SYN-O03",
+      "partner_id": "SYN-P01",
+      "customer": "演示客户·A03",
+      "sector": "教育服务",
+      "need": "校区基础设施更新",
+      "owner": "演示业务角色B",
+      "stage": "negotiation",
+      "amount_cny": 73000,
+      "budget_status": "confirmed",
+      "decision_status": "confirmed",
+      "expected_close": "2030-03-22",
+      "updated_on": "2030-03-14",
+      "confirmed": true,
+      "contract_confirmed": false,
+      "source_ids": [
+        "SYN-S03",
+        "SYN-S09"
+      ],
+      "reportable": false,
+      "alerts": [
+        {
+          "code": "HELD",
+          "message": "来源冲突，等待人工确认"
+        }
+      ],
+      "stage_label": "商务沟通"
+    },
+    {
+      "id": "SYN-O04",
+      "partner_id": "SYN-P01",
+      "customer": "演示客户·A04",
+      "sector": "物流服务",
+      "need": "分支网络服务采购",
+      "owner": "演示业务角色B",
+      "stage": "won",
+      "amount_cny": 32000,
+      "budget_status": "confirmed",
+      "decision_status": "confirmed",
+      "expected_close": "2030-03-12",
+      "updated_on": "2030-03-12",
+      "confirmed": true,
+      "contract_confirmed": true,
+      "source_ids": [
+        "SYN-S04"
+      ],
+      "reportable": true,
+      "alerts": [],
+      "stage_label": "已签约"
+    },
+    {
+      "id": "SYN-O05",
+      "partner_id": "SYN-P02",
+      "customer": "演示客户·A05",
+      "sector": "零售服务",
+      "need": "门店应用访问改造",
+      "owner": "演示业务角色C",
+      "stage": "lost",
+      "amount_cny": 41500,
+      "budget_status": "confirmed",
+      "decision_status": "confirmed",
+      "expected_close": "2030-03-10",
+      "updated_on": "2030-03-10",
+      "confirmed": true,
+      "contract_confirmed": false,
+      "source_ids": [
+        "SYN-S05"
+      ],
+      "reportable": true,
+      "alerts": [],
+      "stage_label": "已丢单"
+    },
+    {
+      "id": "SYN-O06",
+      "partner_id": "SYN-P02",
+      "customer": "演示客户·A06",
+      "sector": "文创服务",
+      "need": "历史项目取消",
+      "owner": "演示业务角色C",
+      "stage": "cancelled",
+      "amount_cny": 15000,
+      "budget_status": "unknown",
+      "decision_status": "unknown",
+      "expected_close": null,
+      "updated_on": "2030-03-13",
+      "confirmed": true,
+      "contract_confirmed": false,
+      "source_ids": [
+        "SYN-S06"
+      ],
+      "reportable": true,
+      "alerts": [],
+      "stage_label": "已取消"
+    },
+    {
+      "id": "SYN-O07",
+      "partner_id": "SYN-P02",
+      "customer": "演示客户·A07",
+      "sector": "咨询服务",
+      "need": "尚未确认的采购需求",
+      "owner": "演示业务角色C",
+      "stage": "negotiation",
+      "amount_cny": 86000,
+      "budget_status": "pending",
+      "decision_status": "pending",
+      "expected_close": "2030-03-29",
+      "updated_on": "2030-03-14",
+      "confirmed": false,
+      "contract_confirmed": false,
+      "source_ids": [
+        "SYN-S07"
+      ],
+      "reportable": false,
+      "alerts": [
+        {
+          "code": "HELD",
+          "message": "事实或来源尚未确认"
+        },
+        {
+          "code": "BUDGET",
+          "message": "预算未确认"
+        },
+        {
+          "code": "DECISION",
+          "message": "决策角色未确认"
+        }
+      ],
+      "stage_label": "商务沟通"
+    },
+    {
+      "id": "SYN-O08",
+      "partner_id": "SYN-P02",
+      "customer": "演示客户·A08",
+      "sector": "设计服务",
+      "need": "共享文件服务容量规划",
+      "owner": "演示业务角色C",
+      "stage": "discovery",
+      "amount_cny": 54000,
+      "budget_status": "unknown",
+      "decision_status": "unknown",
+      "expected_close": "2030-03-10",
+      "updated_on": "2030-02-28",
+      "confirmed": true,
+      "contract_confirmed": false,
+      "source_ids": [
+        "SYN-S08"
+      ],
+      "reportable": true,
+      "alerts": [
+        {
+          "code": "BUDGET",
+          "message": "预算未确认"
+        },
+        {
+          "code": "DECISION",
+          "message": "决策角色未确认"
+        },
+        {
+          "code": "OVERDUE",
+          "message": "采购日期已过，需更新状态"
+        },
+        {
+          "code": "STALE",
+          "message": "超过演示规则的10天未更新提醒线"
+        }
+      ],
+      "stage_label": "需求发现"
+    }
+  ]
+}

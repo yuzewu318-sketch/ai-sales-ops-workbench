@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Sales Ops Workbench · 离线演示</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;color:#18302d;background:#f5f7f4}
+*{box-sizing:border-box}body{margin:0}header,main{max-width:1160px;margin:auto;padding:32px 24px}header{padding-bottom:12px}
+.eyebrow{color:#397665;font-size:13px;letter-spacing:2px}h1{font-size:clamp(27px,4vw,42px);margin:12px 0}header p{line-height:1.8;color:#51665e}
+.notice{padding:13px 16px;background:#fff4d8;border-radius:8px;color:#72561c;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}.card{background:white;border:1px solid #dce6df;border-radius:12px;padding:20px}
+.card span{display:block;color:#63756d;font-size:13px}.card strong{display:block;margin-top:12px;font-size:23px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}button{border:1px solid #cfddd5;background:white;color:#244e40;padding:10px 16px;border-radius:8px;cursor:pointer}
+button[aria-pressed=true]{background:#285d4c;color:white;border-color:#285d4c}button:focus-visible{outline:3px solid #dcaf4a;outline-offset:3px}
+.panel{background:white;border:1px solid #dce6df;border-radius:14px;padding:24px}h2{margin:0 0 16px;font-size:22px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.85 system-ui,sans-serif;margin:0;color:#354e43}
+footer{font-size:13px;color:#64766c;line-height:1.8;margin:20px 0}a{color:#285d4c}@media(max-width:700px){.cards{grid-template-columns:repeat(2,1fr)}header,main{padding:20px 16px}.panel{padding:16px}.card strong{font-size:19px}}
+</style>
+<header><div class="eyebrow">EVIDENCE FIRST / LOCAL BY DEFAULT</div><h1>AI 销售运营工作台</h1>
+<p>六类业务任务，共享可追溯事实。离线规则先检查，AI负责辅助分析，最终由人确认。</p>
+<div class="notice">公开作品集演示：全部数据为虚构。当前页面展示本地规则输出，未调用在线模型，也未连接任何企业系统。</div></header>
+<main><div class="cards"><div class="card"><span>演示商机</span><strong>8</strong></div><div class="card"><span>暂缓汇总</span><strong>2</strong></div><div class="card"><span>已确认签约</span><strong>32,000.00 元</strong></div><div class="card"><span>已确认在途 · 非预测</span><strong>316,000.00 元</strong></div></div><nav aria-label="工作模块"><button type="button" data-panel="controller" aria-pressed="true">任务总控</button><button type="button" data-panel="channels" aria-pressed="false">渠道经营</button><button type="button" data-panel="projects" aria-pressed="false">商机检查</button><button type="button" data-panel="weekly" aria-pressed="false">经营周报</button><button type="button" data-panel="solutions" aria-pressed="false">方案准备</button><button type="button" data-panel="knowledge" aria-pressed="false">知识学习</button></nav><section id="controller" class="panel" ><h2>任务总控</h2><pre># 任务总控
+
+&gt; 全部为虚构演示数据；规则输出，不是模型生成结果。统计日：2030-03-15。
+
+## 先处理的事项
+
+- SYN-O01：预算未确认、决策角色未确认、超过演示规则的10天未更新提醒线。交给商机检查模块，责任角色：演示业务角色A。
+- SYN-O02：决策角色未确认。交给商机检查模块，责任角色：演示业务角色A。
+- SYN-O03：来源冲突，等待人工确认。交给商机检查模块，责任角色：演示业务角色B。
+- SYN-O07：事实或来源尚未确认、预算未确认、决策角色未确认。交给商机检查模块，责任角色：演示业务角色C。
+- SYN-O08：预算未确认、决策角色未确认、采购日期已过，需更新状态、超过演示规则的10天未更新提醒线。交给商机检查模块，责任角色：演示业务角色C。
+
+## 审批边界
+
+本工具不发送邮件、不写回CRM、不替代采购审批。外部动作由人工决定。
+</pre></section><section id="channels" class="panel" hidden><h2>渠道经营</h2><pre># 渠道经营
+
+&gt; 全部为虚构演示数据；规则输出，不是模型生成结果。统计日：2030-03-15。
+
+## 伙伴经营范围
+
+### 演示伙伴·P01（SYN-P01）
+
+- 团队：销售5人，技术2人；仅为演示规模。
+- 对接记录：4条；行业：制造服务、教育服务、物流服务、设计服务。
+- 下一步：结合具体客户需求安排联合交流；不把培训次数或客户名单当作成交结果。
+
+### 演示伙伴·P02（SYN-P02）
+
+- 团队：销售2人，技术1人；仅为演示规模。
+- 对接记录：4条；行业：咨询服务、文创服务、设计服务、零售服务。
+- 下一步：结合具体客户需求安排联合交流；不把培训次数或客户名单当作成交结果。
+
+</pre></section><section id="projects" class="panel" hidden><h2>商机检查</h2><pre># 商机检查
+
+&gt; 全部为虚构演示数据；规则输出，不是模型生成结果。统计日：2030-03-15。
+
+## 逐项检查
+
+### SYN-O01 · 演示客户·A01
+
+- 阶段：需求发现；金额：168,000.00 元；可用于事实汇总。
+- 已记录需求：跨团队研发数据共享
+- 来源：SYN-S01
+- 提醒：预算未确认；决策角色未确认；超过演示规则的10天未更新提醒线
+
+### SYN-O02 · 演示客户·A02
+
+- 阶段：方案验证；金额：94,000.00 元；可用于事实汇总。
+- 已记录需求：远程协作访问的安全验证
+- 来源：SYN-S02
+- 提醒：决策角色未确认
+
+### SYN-O03 · 演示客户·A03
+
+- 阶段：商务沟通；金额：73,000.00 元；暂缓进入事实汇总。
+- 已记录需求：校区基础设施更新
+- 来源：SYN-S03, SYN-S09
+- 提醒：来源冲突，等待人工确认
+
+### SYN-O04 · 演示客户·A04
+
+- 阶段：已签约；金额：32,000.00 元；可用于事实汇总。
+- 已记录需求：分支网络服务采购
+- 来源：SYN-S04
+- 提醒：未触发当前规则；仍须人工复核
+
+### SYN-O05 · 演示客户·A05
+
+- 阶段：已丢单；金额：41,500.00 元；可用于事实汇总。
+- 已记录需求：门店应用访问改造
+- 来源：SYN-S05
+- 提醒：未触发当前规则；仍须人工复核
+
+### SYN-O06 · 演示客户·A06
+
+- 阶段：已取消；金额：15,000.00 元；可用于事实汇总。
+- 已记录需求：历史项目取消
+- 来源：SYN-S06
+- 提醒：未触发当前规则；仍须人工复核
+
+### SYN-O07 · 演示客户·A07
+
+- 阶段：商务沟通；金额：86,000.00 元；暂缓进入事实汇总。
+- 已记录需求：尚未确认的采购需求
+- 来源：SYN-S07
+- 提醒：事实或来源尚未确认；预算未确认；决策角色未确认
+
+### SYN-O08 · 演示客户·A08
+
+- 阶段：需求发现；金额：54,000.00 元；可用于事实汇总。
+- 已记录需求：共享文件服务容量规划
+- 来源：SYN-S08
+- 提醒：预算未确认；决策角色未确认；采购日期已过，需更新状态；超过演示规则的10天未更新提醒线
+
+</pre></section><section id="weekly" class="panel" hidden><h2>经营周报</h2><pre># 经营周报
+
+&gt; 全部为虚构演示数据；规则输出，不是模型生成结果。统计日：2030-03-15。
+
+## 已确认的经营事实
+
+- 记录总数：8条；可汇总：6条；暂缓：2条。
+- 已确认签约：1条，合计32,000.00 元。不是回款或收入确认。
+- 已确认在途：3条，合计316,000.00 元。不是销售预测。
+- 丢单/取消：2条，不计入在途。
+
+## 可引用的记录
+
+- SYN-O01 / 需求发现 / 168,000.00 元 / 来源 SYN-S01
+- SYN-O02 / 方案验证 / 94,000.00 元 / 来源 SYN-S02
+- SYN-O04 / 已签约 / 32,000.00 元 / 来源 SYN-S04
+- SYN-O05 / 已丢单 / 41,500.00 元 / 来源 SYN-S05
+- SYN-O06 / 已取消 / 15,000.00 元 / 来源 SYN-S06
+- SYN-O08 / 需求发现 / 54,000.00 元 / 来源 SYN-S08
+
+## 待确认
+
+- SYN-O03：来源冲突，等待人工确认
+- SYN-O07：事实或来源尚未确认
+</pre></section><section id="solutions" class="panel" hidden><h2>方案准备</h2><pre># 方案准备
+
+&gt; 全部为虚构演示数据；规则输出，不是模型生成结果。统计日：2030-03-15。
+
+## 需求驱动的方案准备清单
+
+### SYN-O01 · 演示客户·A01
+
+- 业务问题：跨团队研发数据共享
+- 待共同确认：现状、使用对象、验收指标和变更窗口。
+- 拟定验证：由客户确认测试负载、成功标准、观察周期和问题退出条件。
+- 边界：不自动给出品牌、型号、报价或性能保证；不把验证计划写成已完成测试。
+- 依据：SYN-S01
+
+### SYN-O02 · 演示客户·A02
+
+- 业务问题：远程协作访问的安全验证
+- 待共同确认：现状、使用对象、验收指标和变更窗口。
+- 拟定验证：由客户确认测试负载、成功标准、观察周期和问题退出条件。
+- 边界：不自动给出品牌、型号、报价或性能保证；不把验证计划写成已完成测试。
+- 依据：SYN-S02
+
+### SYN-O08 · 演示客户·A08
+
+- 业务问题：共享文件服务容量规划
+- 待共同确认：现状、使用对象、验收指标和变更窗口。
+- 拟定验证：由客户确认测试负载、成功标准、观察周期和问题退出条件。
+- 边界：不自动给出品牌、型号、报价或性能保证；不把验证计划写成已完成测试。
+- 依据：SYN-S08
+
+</pre></section><section id="knowledge" class="panel" hidden><h2>知识学习</h2><pre># 知识学习
+
+&gt; 全部为虚构演示数据；规则输出，不是模型生成结果。统计日：2030-03-15。
+
+## 本地知识条目
+
+按关键词匹配，不是向量检索或RAG。过期内容只供历史参考。
+
+- SYN-K01（演示有效期内，来源已确认）：方案验证：先确认真实业务负载、验收标准及问题退出条件。测试意向不等于采购合同。 依据：SYN-KS01
+- SYN-K02（已过期，来源已确认）：历史演示服务方案：适用窗口已结束，不作为当前能力或价格承诺。 依据：SYN-KS02
+</pre></section>
+<footer>金额单位：人民币元。在途金额不是预测，已签约不是回款。规则通过不代表所有语义正确。<br>
+<a href="../../README.md">项目说明</a> · <a href="../architecture.md">设计说明</a> · <a href="audit.json">结构化检查结果</a></footer></main>
+<script>
+document.querySelectorAll('[data-panel]').forEach(button=>button.addEventListener('click',()=>{
+document.querySelectorAll('.panel').forEach(panel=>panel.hidden=panel.id!==button.dataset.panel);
+document.querySelectorAll('[data-panel]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
+}));
+</script></html>

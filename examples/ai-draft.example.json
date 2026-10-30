@@ -1,0 +1,17 @@
+{
+  "module": "weekly",
+  "human_review_required": true,
+  "facts": [
+    {
+      "project_id": "SYN-O04",
+      "statement": "演示客户A04已确认签约32000元；没有回款确认信息。",
+      "source_ids": ["SYN-S04"],
+      "stage": "won",
+      "amount_cny": 32000
+    }
+  ],
+  "actions": [
+    {"project_id": "SYN-O03", "action": "核对两份来源的金额差异", "owner": "待人工指定", "due_date": null}
+  ],
+  "limitations": "人工编写的格式示例，不是在线模型调用记录；动作和自由文本仍需人工审核。"
+}
